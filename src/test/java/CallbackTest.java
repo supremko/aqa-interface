@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class CallbackTest {
     @Test
-    void shouldSubmitRequest() {
+    void shouldSubmitRequest() throws InterruptedException {
         open("http://localhost:9999");
         SelenideElement form = $("[class='form form_size_m form_theme_alfa-on-white']");
         form.$("[data-test-id=name] input").setValue("Василий");
